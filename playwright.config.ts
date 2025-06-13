@@ -22,14 +22,20 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  // reporter: 'html',
+  reporter: [['html', { open: 'on-failure' }]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-     baseURL: 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login',
+     baseURL: 'https://demo.nopcommerce.com',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    
+  screenshot: 'only-on-failure',  // or 'on', 'off'
+  video: 'retain-on-failure',     // or 'on', 'off'
+ // trace: 'on-first-retry',        // optional: trace viewer
+
   },
 
   /* Configure projects for major browsers */

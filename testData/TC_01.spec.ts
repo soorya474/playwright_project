@@ -1,9 +1,11 @@
-//import LoginTestData { TLoginTestData } from "../types/TLoginTestData.spec";
+
 
 export const  LoginTestData={
-    userid: "admin",
-    password: "admin123"
+    userid: "soorya474@gmail.com",
+    password: "Aaradhmon1@",
+    categories:"Laptops",
+    product:"Sony vaio i5"
 }
-    //export function ACancelRoomBookingInCypressTestData():TACRSTestData[] {
+    
 
 
