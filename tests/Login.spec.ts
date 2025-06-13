@@ -14,7 +14,7 @@ test('Login test',async()=>{
     const page:Page=await browser.newPage();
     const loginPage=new LoginPage(page,LoginTestData);
     await page.setViewportSize({ width: 800, height: 600 });
-    await page.goto('https://uat.devtest.vegas/book-room/resort/');
+    await page.goto('');
     await page.waitForTimeout(35000);
     loginPage.loginToApp();
 });
