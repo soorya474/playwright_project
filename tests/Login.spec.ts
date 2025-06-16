@@ -5,10 +5,9 @@ import { TLoginTestData } from "../types/TLoginTestData.spec";
 import { LoginTestData } from "../testData/TC_01.spec";
 import { LoginPage } from '../pages/LoginP.spec';
 
-
+//This test launches the page and add the product to the cart
 test('Login test',async({page})=>{
     
-  
     const login= new LoginPage(page);
     await login.vistUrl();
     await login.clickOnCategories();
