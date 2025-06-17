@@ -30,9 +30,8 @@ export class LoginPage {
     await this.page.locator(this.userName).click();
     await this.page.locator(this.userName).fill(LoginTestData.userid);
     await this.page.waitForTimeout(10000);
-    (await this.page.waitForSelector(this.password)).click();
+    await this.page.locator(this.password).click();
     await this.page.locator(this.password).fill(LoginTestData.password);
-    await this.page.waitForSelector(this.submitBtn);
     await this.page.locator(this.submitBtn).click();
 
   }
