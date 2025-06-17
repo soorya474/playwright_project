@@ -48,4 +48,3 @@ It will open an interactive report at playwright-report/index.html.
 3.Element locators with CSS and XPath
 4.Rich HTML test reports
 5.Page Object Model (POM) architecture
-6. Retry logic 
