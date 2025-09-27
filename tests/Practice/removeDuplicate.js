@@ -1,10 +1,21 @@
+// function removeDuplicate(arr){
+//     let newArray=[];
+//     for(let i=0;i<arr.length;i++){
+//         if(newArray.indexOf(arr[i])===-1){
+//             newArray.push(arr[i])
+//         }
+//     }
+//     return newArray;
+// }
+// console.log(removeDuplicate([1,2,2,3,4,5,6]))
+
 function removeDuplicate(arr){
-    let newArray=[];
+    let newarray=[];
     for(let i=0;i<arr.length;i++){
-        if(newArray.indexOf(arr[i])===-1){
-            newArray.push(arr[i])
+        if(!newarray.includes(arr[i])){
+            newarray.push(arr[i]);
         }
     }
-    return newArray;
+    return newarray;
 }
-console.log(removeDuplicate([1,2,2,3,4,5,6]))
+console.log(removeDuplicate[1,2,2,3,4,5]);
