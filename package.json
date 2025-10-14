@@ -2,7 +2,9 @@
   "name": "soorya_playwright",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "qa":""
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

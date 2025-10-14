@@ -1,12 +1,17 @@
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig } from '@playwright/test';
 
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-// import dotenv from 'dotenv';
+import dotenv from 'dotenv';
 // import path from 'path';
-// dotenv.config({ path: path.resolve(__dirname, '.env') });
+
+
+dotenv.config({ 
+ path: `./env/.env.${process.env.ENV}`
+ 
+});
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -36,15 +41,22 @@ export default defineConfig({
   video: 'retain-on-failure',     // or 'on', 'off'
  // trace: 'on-first-retry',        // optional: trace viewer
 
-  },
+   },
 
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name:'chromium' ,
+     
+      use: { 
+         //browserName:'chromium',
+         baseURL:  'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login',  
+        //...devices['Desktop Chrome'] },
     }
-
+  },
+ 
+    
+  
     // {
     //   name: 'firefox',
     //   use: { ...devices['Desktop Firefox'] },

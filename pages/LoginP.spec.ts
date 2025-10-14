@@ -7,11 +7,13 @@ export class LoginPage {
   private password: string;
   private loginBtn: string;
   private submitBtn: string;
+  private baseURL: string;
  
-  page: Page;
+//  page: Page;
 
-  constructor(page: Page) {
-    this.page = page;
+  constructor(private page: Page,baseURL:string) {
+    //this.page = page;
+    this.baseURL=baseURL,
     this.loginBtn = "a[class='ico-login']",
     this.userName = "input[name='username']",
     this.password = "input[name='password']",
@@ -23,7 +25,8 @@ export class LoginPage {
  * Launches the page
  */
   async vistUrl() {
-    await this.page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+    //await this.page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+  await this.page.goto(this.baseURL!);
   }
 
   async loginToApp(){

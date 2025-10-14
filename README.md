@@ -20,16 +20,19 @@ cd playwright-portfolio
 ### 2. Install dependencies
 npm install
 
-###3. Run tests
+### 3. Install Playwright/Browser engines
+npx install playwright
+
+###4. Run tests
 npx playwright test
 
-###4. Run tests in specific browser
+###5. Run tests in specific browser
 npx playwright test --project=chromium
 
-###5. Run in headed mode
+###6. Run in headed mode
 npx playwright test --headed
 
-###6. HTML Report
+###7. HTML Report
 npx playwright show-report
 It will open an interactive report at playwright-report/index.html.
 
@@ -48,3 +51,7 @@ It will open an interactive report at playwright-report/index.html.
 3.Element locators with CSS and XPath
 4.Rich HTML test reports
 5.Page Object Model (POM) architecture
+
+
+### Features
+

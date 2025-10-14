@@ -6,9 +6,9 @@ import { HomePage } from '../pages/HomeP.spec';
 import { LeavePage } from '../pages/LeaveP.spec';
 
 //This test launches the page and add the product to the cart
-test('Login test',async({page})=>{
+test('Login test',async({page,baseURL})=>{
     
-    const login= new LoginPage(page);
+    const login= new LoginPage(page,baseURL!);
     const home= new HomePage(page);
     const leave=new LeavePage(page);
     await login.vistUrl();
